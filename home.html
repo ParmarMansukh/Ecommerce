@@ -6,14 +6,13 @@
     <title>Product Homepage</title>
     <!-- <link rel="stylesheet" href="styles.css"> -->
      <style>
-        /* General Styling */
+    
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* background: linear-gradient(to bottom right, #f12fa7, #00f33d, #8a1bb9, #c0392b); */
-background-color: white;
+    background-color: white;
 }
 
 header {
@@ -35,27 +34,17 @@ nav {
 nav .logo {
     font-size: 24px;
     font-weight: bold;
-    
-background: linear-gradient(
-
-to right, rgb(27, 4, 241), #f0057a 35%, #04ffea,rgb(4, 252, 58));
-
-background-size: 200% auto;
-
--webkit-background-clip: text;
-
--webkit-text-fill-color: transparent;
-
-animation: gradient 3s linear infinite; }
+    background: linear-gradient(to right, rgb(27, 4, 241), #f0057a 35%, #04ffea, rgb(4, 252, 58));
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient 3s linear infinite;
+}
 
 @keyframes gradient {
-
-0% { background-position: 0% 75%; }
-
-50% { background-position: 100% 50%; }
-
-100% { background-position: 0% 70%; }
-
+    0% { background-position: 0% 75%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 70%; }
 }
 
 nav ul {
@@ -95,43 +84,26 @@ nav ul li a {
     margin-bottom: 40px;
 }
 
-
-
 .products-section {
     padding: 60px 20px;
     text-align: center;
-    
 }
 
 .products-section h2 {
     font-size: 36px;
     margin-bottom: 40px;
-    
-background: linear-gradient(
-
-to right, rgb(12, 240, 228), #f0057a 35%, #0af802,rgb(250, 7, 7));
-
-background-size: 200% auto;
-
--webkit-background-clip: text;
-
--webkit-text-fill-color: transparent;
-
-animation: gradient 3s linear infinite; }
-
-@keyframes gradient {
-
-0% { background-position: 0% 75%; }
-
-50% { background-position: 100% 50%; }
-
-100% { background-position: 0% 70%; }
+    background: linear-gradient(to right, rgb(12, 240, 228), #f0057a 35%, #0af802, rgb(250, 7, 7));
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient 3s linear infinite;
 }
 
 .product-grid {
     display: flex;
     gap: 20px;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .product-card {
@@ -172,32 +144,12 @@ animation: gradient 3s linear infinite; }
     background-color: #f4f4f4;
     text-align: center;
     font-size: 20px;
-
-background: linear-gradient(
-
-to right, rgb(27, 4, 241), #f0057a 35%, #e00a95,black);
-
-background-size: 200% auto;
-
--webkit-background-clip: text;
-
--webkit-text-fill-color: transparent;
-
-animation: gradient 3s linear infinite; }
-
-@keyframes gradient {
-
-0% { background-position: 0% 75%; }
-
-50% { background-position: 100% 50%; }
-
-100% { background-position: 0% 70%; }
+    background: linear-gradient(to right, rgb(27, 4, 241), #f0057a 35%, #e00a95, black);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient 3s linear infinite;
 }
-
-/* .about-section h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-} */
 
 footer {
     background-color: #333;
@@ -208,6 +160,108 @@ footer {
 
 footer p {
     margin: 0;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    nav {
+        padding: 0 10px;
+    }
+
+    nav ul {
+        gap: 15px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .hero-content p {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .product-card {
+        width: 200px;
+    }
+
+    .products-section h2 {
+        font-size: 30px;
+    }
+
+    .hero-content h1 {
+        font-size: 30px;
+    }
+
+    .hero-content p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .product-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .products-section h2 {
+        font-size: 26px;
+    }
+
+    .hero-content h1 {
+        font-size: 24px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-content {
+        padding: 50px 10px;
+    }
+
+    .products-section {
+        padding: 40px 10px;
+    }
+
+    .product-card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .product-card h3 {
+        font-size: 20px;
+    }
+
+    .product-card p {
+        font-size: 18px;
+    }
+
+    footer p {
+        font-size: 14px;
+    }
 }
 
      </style>
