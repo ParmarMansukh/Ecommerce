@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+     <style>
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    /* background:linear-gradient(rgb(8, 175, 241),rgb(1, 2, 1),rgb(72, 21, 212)) ; */
+    background: linear-gradient(to bottom right, #00c6ff, #0072ff, #8e44ad, #c0392b);
+
+
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1e1e1e;
+    font-family: Arial, sans-serif;
+}
+
+.register-container {
+    /* background-color: #220b0b; */
+
+
+
+    
+    /* background:linear-gradient(rgb(235, 28, 28),green,rgb(226, 38, 163)) ; */
+    background: linear-gradient(to bottom right,black, #ff08de, #06ff59, #04f8f8, #3124e4,black);
+
+    border-top: 3px solid rgb(196, 235, 24);
+    border-left: 3px solid rgb(211, 18, 18);
+    border-right: 3px solid rgb(211, 17, 162);
+    border-bottom: 3px solid rgb(5, 185, 20);
+    
+
+
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    width: 320px;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.register-form input {
+    background-color: #3e3e3e;
+    border: none;
+    padding: 15px;
+    margin-bottom: 15px;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.register-form input::placeholder {
+    color: #b1b1b1;
+}
+
+.register-form button {
+    background-color: #6200ea;
+    color: #fff;
+    padding: 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.register-form button:hover {
+    background-color: #3700b3;
+}
+
+.register-form p {
+    color: black;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.register-form a {
+    color: rgb(236, 201, 3);
+    font-size: large;
+    text-decoration: none;
+}
+.register-form a:hover{
+color:blue;
+}
+
+.register-form a:hover {
+    text-decoration: underline;
+}
+h3{
+
+justify-content: center;
+text-align: center;
+background: linear-gradient(
+
+to right, rgb(43, 252, 2), #f0057a 35%,black, #0dc9f8,rgb(253, 3, 3));
+
+background-size: 200% auto;
+
+-webkit-background-clip: text;
+
+-webkit-text-fill-color: transparent;
+
+animation: gradient 3s linear infinite; }
+
+@keyframes gradient {
+
+0% { background-position: 0% 75%; }
+
+50% { background-position: 100% 50%; }
+
+100% { background-position: 0% 70%; }
+
+}
+
+     </style>
+</head>
+<body>
+    
+    <div class="register-container">
+        <h3>PM.Parmar_741</h3>
+        <form class="register-form">
+            <h3 class="title">Sign Up</h3>
+            <input type="text" placeholder="Username" required>
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <input type="password" placeholder="Confirm Password" required>
+            <button type="submit">Register</button>
+            <p>Already have an account? <a href="login.html">Sign In</a></p>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa; /* Light cyan background color */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .profile-container {
+            text-align: center;
+            background-color: #fff;
+            border-radius: 12px; /* Slightly larger border radius */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow for a bigger profile */
+            padding: 30px; /* Increased padding */
+            max-width: 400px; /* Larger maximum width */
+            width: 100%;
+            text-shadow: 0 12px 6px rgba(241, 19, 19, 0.1); 
+        }
+
+        .profile-image img {
+            border-radius: 50%;
+            width: 180px; /* Larger profile image */
+            height: 180px; /* Larger profile image */
+            object-fit: cover;
+        }
+
+        .profile-info h1 {
+            margin: 15px 0 10px; /* Adjusted margin for larger text */
+            font-size: 32px; /* Larger font size for the name */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* More pronounced shadow for the name */
+        }
+
+        .profile-info p {
+            color: #2c1a28;
+            margin: 0;
+            font-size: 20px; /* Larger font size for the role */
+            text-shadow: 6px 8px 9px rgba(255, 12, 12, 0.2); /* Subtle shadow for the role */
+        }
+
+        .follow-button {
+            margin-top: 20px; /* Increased margin */
+            padding: 12px 24px; /* Larger button padding */
+            border: none;
+            border-radius: 6px; /* Slightly larger border radius */
+            background-color: #007bff;
+            color: #fff;
+            font-size: 18px; /* Larger font size for the button */
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .follow-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+                
+    <div class="profile-container">
+        <h3>My ProFile</h3>
+
+        <div class="profile-image">
+            <img src="photo.jpg" alt="Profile Image">
+        </div>
+        <div class="profile-info">
+            <h1>Parmar Mansukh</h1>
+            <p>Web Developer</p>
+            <button id="followButton" class="follow-button">Follow</button>
+        </div>
+    </div>
+    <script>
+        document.getElementById('followButton').addEventListener('click', function() {
+            let button = this;
+            if (button.textContent === 'Follow') {
+                button.textContent = 'Following';
+                button.style.backgroundColor = '#28a745'; // Green color for 'Following'
+            } else {
+                button.textContent = 'Follow';
+                button.style.backgroundColor = '#007bff'; // Original blue color
+            }
+        });
+    </script>
+</body>
+</html>

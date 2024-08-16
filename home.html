@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Homepage</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+     <style>
+        /* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background: linear-gradient(to bottom right, #f12fa7, #00f33d, #8a1bb9, #c0392b); */
+background-color: white;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav .logo {
+    font-size: 24px;
+    font-weight: bold;
+    
+background: linear-gradient(
+
+to right, rgb(27, 4, 241), #f0057a 35%, #04ffea,rgb(4, 252, 58));
+
+background-size: 200% auto;
+
+-webkit-background-clip: text;
+
+-webkit-text-fill-color: transparent;
+
+animation: gradient 3s linear infinite; }
+
+@keyframes gradient {
+
+0% { background-position: 0% 75%; }
+
+50% { background-position: 100% 50%; }
+
+100% { background-position: 0% 70%; }
+
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+#hero {
+    background-image: url('hero-background.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+
+
+.products-section {
+    padding: 60px 20px;
+    text-align: center;
+    
+}
+
+.products-section h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    
+background: linear-gradient(
+
+to right, rgb(12, 240, 228), #f0057a 35%, #0af802,rgb(250, 7, 7));
+
+background-size: 200% auto;
+
+-webkit-background-clip: text;
+
+-webkit-text-fill-color: transparent;
+
+animation: gradient 3s linear infinite; }
+
+@keyframes gradient {
+
+0% { background-position: 0% 75%; }
+
+50% { background-position: 100% 50%; }
+
+100% { background-position: 0% 70%; }
+}
+
+.product-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.product-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 250px;
+}
+
+.product-card img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.product-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.product-card p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.btn-secondary {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.about-section {
+    padding: 60px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+    font-size: 20px;
+
+background: linear-gradient(
+
+to right, rgb(27, 4, 241), #f0057a 35%, #e00a95,black);
+
+background-size: 200% auto;
+
+-webkit-background-clip: text;
+
+-webkit-text-fill-color: transparent;
+
+animation: gradient 3s linear infinite; }
+
+@keyframes gradient {
+
+0% { background-position: 0% 75%; }
+
+50% { background-position: 100% 50%; }
+
+100% { background-position: 0% 70%; }
+}
+
+/* .about-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+} */
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    margin: 0;
+}
+
+     </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">RutForce Oil Best</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">About</a></li>
+                <li><a href="index.html">Products</a></li>
+                <li><a href="index.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+   
+
+    <section id="products" class="products-section">
+         <h2>  Our Products </h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="pm5.jpeg" alt="Product 1">
+                <h3>Rutfore Oil cars</h3>
+                <p>₹32279</p>
+                <a href="#" class="btn-secondary">Buy Now</a>
+            </div>
+            <div class="product-card">
+                <img src="pm4.jpeg" alt="Product 2">
+                <h3>Rutfore Bikes Oil</h3>
+                <p>₹279</p>
+                <a href="#" class="btn-secondary">Buy Now</a>
+            </div>
+            <div class="product-card">
+                <img src="pm3.jpeg" alt="Product 3">
+                <h3>Rutfore Oil Bikes</h3>
+                <p>$49.99</p>
+                <a href="#" class="btn-secondary">Buy Now</a>
+            </div>
+
+            
+
+        </div>
+    </section>
+
+    <section id="products" class="products-section">
+        <!-- <h2>Our Products</h2> -->
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="pm15.jpeg" alt="Product 1">
+                <h3>HP Laptop i7</h3>
+                <p>₹62279</p>
+                <a href="#" class="btn-secondary">Buy Now</a>
+            </div>
+            <div class="product-card">
+                <img src="pm14.jpeg" alt="Product 2">
+                <h3>HP Laptop NotBook </h3>
+                <p>₹22279</p>
+                <a href="#" class="btn-secondary">Buy Now</a>
+            </div>
+            <div class="product-card">
+                <img src="pm13.jpeg" alt="Product 3">
+                <h3>HP Laptop new Modal i7</h3>
+                <p>₹72279</p>
+                <a href="#" class="btn-secondary">Buy Now</a>
+            </div>
+
+            
+
+        </div>
+    </section>
+
+
+
+
+    <section id="about" class="about-section">
+        <!-- <h2>About Us</h2> -->
+        <p>Our mission is to provide high-quality products that meet the needs of our customers.</p>
+    </section>
+
+    <footer>
+        <p>&copy;  Pm.Parmar_741:YourBrand. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

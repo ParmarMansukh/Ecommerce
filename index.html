@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Online Store</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #c1e6eb;
+            color: white;
+            padding: 10px 0;
+        }
+
+        header h1 {
+            display: inline-block;
+            margin: 0;
+            
+background: linear-gradient(
+
+to right, rgb(19, 4, 235), #f0057a 35%, #08b1f3,rgb(252, 10, 10));
+
+background-size: 200% auto;
+
+-webkit-background-clip: text;
+
+-webkit-text-fill-color: transparent;
+
+animation: gradient 3s linear infinite; }
+
+@keyframes gradient {
+
+0% { background-position: 0% 75%; }
+
+50% { background-position: 100% 50%; }
+
+100% { background-position: 0% 70%; }
+
+
+        }
+
+        nav {
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        nav ul li a {
+
+            /* color: white; */
+            font-size: 17px;
+            text-decoration: none;
+
+            background: linear-gradient(
+
+/* to right, rgb(2, 255, 44),rgb(250, 3, 126)); */
+to right, rgb(20, 3, 255), #f0057a 35%,black, #0bbaff,rgb(252, 10, 10));
+
+
+background-size: 200% auto;
+
+-webkit-background-clip: text;
+
+-webkit-text-fill-color: transparent;
+
+animation: gradient 3s linear infinite; }
+
+@keyframes gradient {
+
+0% { background-position: 0% 75%; }
+
+50% { background-position: 100% 50%; }
+
+100% { background-position: 0% 70%; }
+
+        }
+
+        .search-bar {
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+        .search-bar input {
+            padding: 5px;
+            border-radius: 10px;
+        }
+
+        .search-bar button {
+            padding: 5px;
+            background-color: #ff5722;
+            width:78px;
+            border: none;
+            border-radius: 7px;
+            cursor: pointer;
+        }
+
+        /* Main Content Styles */
+        main {
+            padding: 20px 0;
+        }
+
+        .banner {
+            /* background-color: #f3f3f3; */
+            padding: 10px;
+            text-align: center;
+            
+            background: linear-gradient(
+
+to right, rgb(255, 73, 2), #fd1deb 35%, #3002ff,rgb(8, 252, 252));
+
+background-size: 200% auto;
+
+-webkit-background-clip: text;
+
+-webkit-text-fill-color: transparent;
+
+animation: gradient 3s linear infinite; }
+
+@keyframes gradient {
+
+0% { background-position: 0% 75%; }
+
+50% { background-position: 100% 50%; }
+
+100% { background-position: 0% 70%; }
+
+        }
+
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .product {
+            border: 1px solid #ddd;
+            padding: 10px;
+            width: 200px;
+            text-align: center;
+        }
+
+        .product img {
+            width: 100%;
+        }
+
+        .product button {
+            padding: 10px;
+            background-color: #eea13d;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #232f3e;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>My Online Store</h1>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="product3.html">Products</a></li>
+                    <li><a href="product2.html">About</a></li>
+                    <li><a href="product1.html">Oil</a></li>
+                    
+
+                    <li><a href="Contact.html">Contact</a></li>
+                    <li><a href="profile.html">Profil</a></li>
+
+
+                    <li><a href="Register.html">Register</a></li>
+                    <li><a href="login.html">Login</a></li>
+
+                </ul>
+            </nav>
+            <form id="search-form" class="search-bar">
+                <input type="text" id="search-input" placeholder="Search products...">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+    </header>
+    <main>
+        <section class="banner">
+            <h2> Wel Come to..... </h2>
+        </section>
+        <section class="products">
+            <article class="product">
+                <img src="pm1.jpeg" alt="Product 1">
+                <h3>Rutforce oil Bike</h3>
+                <p>₹300</p>
+                <button>Add to Cart</button>
+            </article>
+
+            <article class="product">
+                <img src="pm2.jpeg" alt="Product 2">
+                <h3>Rutforce oil</h3>
+                <p>₹400</p>
+                <button>Add to Cart</button>
+            </article>
+
+            <article class="product">
+                <img src="pm3.jpeg" alt="Product 3">
+                <h3>Rutforce Oil</h3>
+                <p>₹500</p>
+                <button>Add to Cart</button>
+            </article>
+
+            <article class="product">
+                <img src="pm4.jpeg" alt="Product 4">
+                <h3>Rutforce Oil Bikes</h3>
+                <p>₹300</p>
+                <button>Add to Cart</button>
+            </article>
+
+            <article class="product">
+                <img src="pm5.jpeg" alt="Product 5">
+                <h3>Rutforce Oil Cars</h3>
+                <p>₹8279</p>
+                <button>Add to Cart</button>
+            </article>
+
+            <article class="product">
+                <img src="pm6.jpeg" alt="Product 5">
+                <h3>Cars Oil Best <b>Products </b></h3>
+                <p>₹9558</p>
+                <button>Add to Cart</button>
+            </article>
+            <article class="product">
+                <img src="pm7.jpeg" alt="Product 5">
+                <h3>Rutforce Oil Bikes</h3>
+                <p>₹900</p>
+                <button>Add to Cart</button>
+            </article>
+            <article class="product">
+                <img src="pm8.jpeg" alt="Product 5">
+                <h3>hp i5 Laptop</h3>
+                <p>₹44279</p>
+                <button>Add to Cart</button>
+            </article>
+            <article class="product">
+                <img src="pm9.jpeg" alt="Product 5">
+                <h3>HP Laptop i3</h3>
+                <p>₹32279</p>
+                <button>Add to Cart</button>
+            </article>
+            <article class="product">
+                <img src="pm10.jpeg" alt="Product 5">
+                <h3>HP new Modal i7</h3>
+                <p>₹59279</p>
+                <button>Add to Cart</button>
+            </article>
+
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; Pm.Parmar_741</p>
+            
+
+
+        </div>
+    </footer>
+    
+    <script>
+        
+        function filterProducts() {
+            
+            const searchQuery = document.getElementById('search-input').value.toLowerCase();
+            
+            
+            const products = document.querySelectorAll('.product');
+            
+            
+            products.forEach(product => {
+                const productName = product.querySelector('h3').textContent.toLowerCase();
+                if (productName.includes(searchQuery)) {
+                    product.style.display = ''; 
+                } else {
+                    product.style.display = 'none'; 
+                }
+            });
+        }
+        
+        
+        document.getElementById('search-input').addEventListener('input', filterProducts);
+
+        
+        document.getElementById('search-form').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+            filterProducts(); 
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+

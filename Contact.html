@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+</head>
+<style>
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    /* background-color: #f4f4f4; */
+    color: #333;
+    background: linear-gradient(to bottom right, #00c6ff, #0072ff, #8e44ad, #c0392b);
+
+}
+
+.contact-container {
+    max-width: 600px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 30px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.contact-container h1 {
+    text-align: center;
+    color: #333;
+}
+
+.contact-container p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-form .form-group {
+    margin-bottom: 15px;
+}
+
+.contact-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    margin-top: 3px;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.submit-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+h4{
+    
+background: linear-gradient(
+
+to right, rgb(27, 4, 241), #f0057a 35%, #e00a95,black);
+
+background-size: 200% auto;
+
+-webkit-background-clip: text;
+
+-webkit-text-fill-color: transparent;
+
+animation: gradient 3s linear infinite; }
+
+@keyframes gradient {
+
+0% { background-position: 0% 75%; }
+
+50% { background-position: 100% 50%; }
+
+100% { background-position: 0% 70%; }
+
+}
+
+h1{
+    
+background: linear-gradient(
+
+to right, rgb(247, 58, 0), #f8027d 35%, #e00a95,black);
+
+background-size: 200% auto;
+
+-webkit-background-clip: text;
+
+-webkit-text-fill-color: transparent;
+
+animation: gradient 3s linear infinite; }
+
+@keyframes gradient {
+
+0% { background-position: 0% 75%; }
+
+50% { background-position: 100% 50%; }
+
+100% { background-position: 0% 70%; }
+
+}
+
+}
+</style>
+<body>
+    <div class="contact-container">
+        <h4>Pm.Parmar.741</h4>
+        <h1>Contact Us</h1>
+
+
+        <p>If you have any questions, feel free to reach out to us by filling out the form below.</p>
+        
+        <form action="#" method="post" class="contact-form">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" required>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+    </div>
+</body>
+</html>

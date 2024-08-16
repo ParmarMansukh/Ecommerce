@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Search with Images</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom right, #00c6ff, #34f104, #f71ad2, #e71c06, rgb(4, 50, 252));
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+            color: white;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            background: linear-gradient(to right, rgb(6, 241, 45), #f0057a 35%, #08b1f3, rgb(252, 10, 10));
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradient 3s linear infinite;
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 75%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 70%; }
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links li {
+            display: inline;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-bar input {
+            padding: 5px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px 0 0 5px;
+            outline: none;
+        }
+
+        .search-bar button {
+            padding: 6px 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+        }
+
+        .search-bar button:hover {
+            background-color: #45a049;
+        }
+
+        .product-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .product {
+            background-color: white;
+            padding: 15px;
+            margin: 10px;
+            width: 250px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s;
+        }
+
+        .product:hover {
+            transform: scale(1.05);
+        }
+
+        .product-image {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .product-name {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .product-description {
+            color: #555;
+            font-size: 14px;
+        }
+        footer {
+            background-color: #232f3e;
+            color: white;
+            padding: 5px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">PM.Parmar_741</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">Products</a></li>
+            <li><a href="index.html">About</a></li>
+            <li><a href="index.html">Contact</a></li>
+        </ul>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search products...">
+            <button onclick="searchProduct()">Search</button>
+        </div>
+    </nav>
+
+    <div class="product-list">
+        <div class="product" data-name="Laptop" data-description="High-performance laptop">
+            <img src="pm20.jpeg" alt="Laptop" class="product-image">
+            <h2 class="product-name">RutForce Oil cars</h2>
+            <p class="product-description"><b>High Lubrication Quality:</b> Reduces friction and heat during machining processes. <b>Rust Prevention:</b> Protects metal surfaces from rust and corrosion.</p>
+        </div>
+        <div class="product" data-name="Smartphone" data-description="Latest smartphone with AI camera">
+            <img src="pm21.jpeg" alt="Smartphone" class="product-image">
+            <h2 class="product-name">Bikes Oil</h2>
+            <p class="product-description"><b>Cooling Properties:</b> Helps in cooling the tool and workpiece during operation. <b>Compatibility:</b> for various metals and machining processes.</p>
+        </div>
+        <div class="product" data-name="Headphones" data-description="Wireless noise-cancelling headphones">
+            <img src="pm22.jpeg" alt="Headphones" class="product-image">
+            <h2 class="product-name">RutForce Cars</h2>
+            <p class="product-description"><b>Lubrication: Rut Force Oil</b> engineered to deliver high-quality lubrication, which minimizes friction between moving parts, reducing wear and extending the lifespan of machinery components.</p>
+        </div>
+        <div class="product" data-name="Camera" data-description="4K Ultra HD camera">
+            <img src="pm23.jpeg" alt="Camera" class="product-image">
+            <h2 class="product-name">Trecter Oil</h2>
+            <p class="product-description"><b>Cooling:</b> The oil has excellent cooling properties that help dissipate heat generated during machining processes, preventing overheating and maintaining optimal operating temperatures.</p>
+        </div>
+
+        <div class="product" data-name="Tablet" data-description="Lightweight tablet with stylus">
+            <img src="pm1.jpeg" alt="Tablet" class="product-image">
+            <h2 class="product-name">RutForce Bikes at best</h2>
+            <p class="product-description"><b>Compatibility:</b> oil is designed to be compatible with a range of metals and machining operations, making it versatile for different industrial applications.</p>
+        </div>
+        <div class="product" data-name="Tablet" data-description="Lightweight tablet with stylus">
+            <img src="pm2.jpeg" alt="Tablet" class="product-image">
+            <h2 class="product-name">Bike Oil</h2>
+            <p class="product-description"><b>Cutting and Machining:</b> Rut Force Oil is commonly used in cutting, grinding, and drilling operations, where it aids in reducing friction and improving the quality of the finished workpiece.</p>
+        </div>
+        <div class="product" data-name="Tablet" data-description="Lightweight tablet with stylus">
+            <img src="pm3.jpeg" alt="Tablet" class="product-image">
+            <h2 class="product-name">RutForce</h2>
+            <p class="product-description"><b>Reduced Maintenance:</b> Regular use of Rut Force Oil can decrease the frequency of maintenance and downtime, contributing to smoother and more reliable operations.</p>
+        </div>
+        <div class="product" data-name="Tablet" data-description="Lightweight tablet with stylus">
+            <img src="pm5.jpeg" alt="Tablet" class="product-image">
+            <h2 class="product-name">RutForce Cars bike, trecter</h2>
+            <p class="product-description"><b>High Lubrication Quality:</b> Reduces friction and heat during machining processes. <b>Rust Prevention:</b> Protects metal surfaces from rust and corrosion.</p>
+        </div>
+    </div>
+
+
+    <script>
+        function searchProduct() {
+            const input = document.getElementById('searchInput').value.toLowerCase();
+            const products = document.getElementsByClassName('product');
+
+            Array.from(products).forEach(product => {
+                const productName = product.querySelector('.product-name').innerText.toLowerCase();
+
+                if (productName.includes(input)) {
+                    product.style.display = 'block';  // Show the product if it matches the search term
+                } else {
+                    product.style.display = 'none';   // Hide the product if it doesn't match
+                }
+            });
+        }
+    </script>
+    <footer>
+        <div class="container">
+            <p>&copy; RutForce Oil  at Best  product  </p>
+        </div>
+    </footer>
+</body>
+</html>
