@@ -6,180 +6,224 @@
     <title>My Online Store</title>
     <!-- <link rel="stylesheet" href="styles.css"> -->
     <style>
-        /* General Styles */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            color: #333;
-        }
+       <style>
+    /* General Styles */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        color: #333;
+    }
 
+    .container {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    /* Header Styles */
+    header {
+        background-color: #c1e6eb;
+        color: white;
+        padding: 10px 0;
+    }
+
+    header h1 {
+        display: inline-block;
+        margin: 0;
+        background: linear-gradient(to right, rgb(19, 4, 235), #f0057a 35%, #08b1f3, rgb(252, 10, 10));
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: gradient 3s linear infinite;
+    }
+
+    @keyframes gradient {
+        0% { background-position: 0% 75%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 70%; }
+    }
+
+    nav {
+        display: inline-block;
+        margin-left: 20px;
+    }
+
+    nav ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    nav ul li {
+        display: inline;
+        margin-right: 10px;
+    }
+
+    nav ul li a {
+        font-size: 17px;
+        text-decoration: none;
+        background: linear-gradient(to right, rgb(20, 3, 255), #f0057a 35%, black, #0bbaff, rgb(252, 10, 10));
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: gradient 3s linear infinite;
+    }
+
+    .search-bar {
+        display: inline-block;
+        margin-left: 20px;
+    }
+
+    .search-bar input {
+        padding: 5px;
+        border-radius: 10px;
+    }
+
+    .search-bar button {
+        padding: 5px;
+        background-color: #ff5722;
+        width: 78px;
+        border: none;
+        border-radius: 7px;
+        cursor: pointer;
+    }
+
+    /* Main Content Styles */
+    main {
+        padding: 20px 0;
+    }
+
+    .banner {
+        padding: 10px;
+        text-align: center;
+        background: linear-gradient(to right, rgb(255, 73, 2), #fd1deb 35%, #3002ff, rgb(8, 252, 252));
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: gradient 3s linear infinite;
+    }
+
+    .products {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .product {
+        border: 1px solid #ddd;
+        padding: 10px;
+        width: 200px;
+        text-align: center;
+    }
+
+    .product img {
+        width: 100%;
+    }
+
+    .product button {
+        padding: 10px;
+        background-color: #eea13d;
+        border: none;
+        cursor: pointer;
+    }
+
+    /* Footer Styles */
+    footer {
+        background-color: #232f3e;
+        color: white;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    /* Media Queries */
+    @media (max-width: 1200px) {
         .container {
-            width: 80%;
-            margin: 0 auto;
-        }
-
-        /* Header Styles */
-        header {
-            background-color: #c1e6eb;
-            color: white;
-            padding: 10px 0;
-        }
-
-        header h1 {
-            display: inline-block;
-            margin: 0;
-            
-background: linear-gradient(
-
-to right, rgb(19, 4, 235), #f0057a 35%, #08b1f3,rgb(252, 10, 10));
-
-background-size: 200% auto;
-
--webkit-background-clip: text;
-
--webkit-text-fill-color: transparent;
-
-animation: gradient 3s linear infinite; }
-
-@keyframes gradient {
-
-0% { background-position: 0% 75%; }
-
-50% { background-position: 100% 50%; }
-
-100% { background-position: 0% 70%; }
-
-
-        }
-
-        nav {
-            display: inline-block;
-            margin-left: 20px;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
+            width: 90%;
         }
 
         nav ul li {
-            display: inline;
-            margin-right: 10px;
-        }
-
-        nav ul li a {
-
-            /* color: white; */
-            font-size: 17px;
-            text-decoration: none;
-
-            background: linear-gradient(
-
-/* to right, rgb(2, 255, 44),rgb(250, 3, 126)); */
-to right, rgb(20, 3, 255), #f0057a 35%,black, #0bbaff,rgb(252, 10, 10));
-
-
-background-size: 200% auto;
-
--webkit-background-clip: text;
-
--webkit-text-fill-color: transparent;
-
-animation: gradient 3s linear infinite; }
-
-@keyframes gradient {
-
-0% { background-position: 0% 75%; }
-
-50% { background-position: 100% 50%; }
-
-100% { background-position: 0% 70%; }
-
-        }
-
-        .search-bar {
-            display: inline-block;
-            margin-left: 20px;
+            margin-right: 15px;
         }
 
         .search-bar input {
-            padding: 5px;
-            border-radius: 10px;
+            padding: 4px;
         }
 
         .search-bar button {
-            padding: 5px;
-            background-color: #ff5722;
-            width:78px;
-            border: none;
-            border-radius: 7px;
-            cursor: pointer;
+            padding: 4px;
+            width: 70px;
+        }
+    }
+
+    @media (max-width: 992px) {
+        header h1 {
+            font-size: 24px;
         }
 
-        /* Main Content Styles */
-        main {
-            padding: 20px 0;
+        nav ul li {
+            display: block;
+            margin: 5px 0;
         }
 
-        .banner {
-            /* background-color: #f3f3f3; */
-            padding: 10px;
-            text-align: center;
-            
-            background: linear-gradient(
-
-to right, rgb(255, 73, 2), #fd1deb 35%, #3002ff,rgb(8, 252, 252));
-
-background-size: 200% auto;
-
--webkit-background-clip: text;
-
--webkit-text-fill-color: transparent;
-
-animation: gradient 3s linear infinite; }
-
-@keyframes gradient {
-
-0% { background-position: 0% 75%; }
-
-50% { background-position: 100% 50%; }
-
-100% { background-position: 0% 70%; }
-
+        .search-bar {
+            display: block;
+            margin-top: 10px;
         }
 
         .products {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
+            flex-direction: column;
+            align-items: center;
         }
 
         .product {
-            border: 1px solid #ddd;
-            padding: 10px;
-            width: 200px;
+            width: 100%;
+            max-width: 300px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        header {
             text-align: center;
         }
 
-        .product img {
+        nav {
+            display: block;
+            margin-top: 10px;
+        }
+
+        .search-bar {
+            margin-top: 10px;
+        }
+
+        .product {
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .search-bar input, .search-bar button {
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .search-bar button {
+            width: auto;
+        }
+
+        .banner h2 {
+            font-size: 18px;
+        }
+
+        .products {
+            flex-direction: column;
+        }
+
+        .product {
             width: 100%;
         }
+    }
+</style>
 
-        .product button {
-            padding: 10px;
-            background-color: #eea13d;
-            border: none;
-            cursor: pointer;
-        }
-
-        /* Footer Styles */
-        footer {
-            background-color: #232f3e;
-            color: white;
-            padding: 10px 0;
-            text-align: center;
-        }
     </style>
 </head>
 <body>
